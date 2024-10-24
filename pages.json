@@ -1,17 +1,71 @@
 {
-	"pages": [{
-		"path": "pages/index/index",
-		"style": {
-			"navigationBarTitleText": "uni-app"
+	"pages": [
+	{
+		"path" : "pages/home/home",
+		"style" : 
+		{
+			
+		}
+	},
+	{
+		"path" : "pages/cate/cate",
+		"style" : 
+		{
+			
+		}
+	},
+	{
+		"path" : "pages/cart/cart",
+		"style" : 
+		{
+			
+		}
+	},
+	{
+		"path" : "pages/my/my",
+		"style" : 
+		{
+			
 		}
 	}],
+	
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "天杯商城",
+		"navigationBarBackgroundColor": "#0055ff",
 		"backgroundColor": "#F8F8F8",
 		"app-plus": {
 			"background": "#efeff4"
 		}
+	},
+	
+	"tabBar": {
+		"selectedColor": "#0055ff",
+		
+		"list": [
+			{
+			"pagePath": "pages/home/home",
+			"text": "首页",
+			"iconPatn": "/static/tabs/home",
+			"selectedIconPath": "/static/tabs/home_selected.png"
+		},
+			{
+			"pagePath": "pages/cate/cate",
+			"text": "分类",
+			"iconPatn": "/static/tabs/cate.png",
+			"selectedIconPath": "/static/tabs/cate_selected.png"
+		},
+			{
+			"pagePath": "pages/cart/cart",
+			"text": "购物车",
+			"iconPatn": "/static/tabs/cart",
+			"selectedIconPath": "/static/tabs/cart_selected.png"
+		},
+			{
+			"pagePath": "pages/my/my",
+			"text": "我的",
+			"iconPatn": "/static/tabs/my2",
+			"selectedIconPath": "/static/tabs/my2_selected.png"
+		}]
 	}
 }
