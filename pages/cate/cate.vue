@@ -1,6 +1,10 @@
 <template>
 	<view>
 		
+		<!-- 使用自定义搜索组件 -->
+		<!-- <my-search :bgcolor="'green'" :radius="3"></my-search> -->
+		<my-search @click="gotoSearch"></my-search>
+		
 		<view class="scroll-view-container">
 			<!-- 左侧滚动条区域 -->
 			<scroll-view class="left-scroll-view" scroll-y="true" :style="{height: wh + 'px'}">
@@ -49,8 +53,8 @@
 		onLoad() {
 			// 获取设备可用高度
 			const sysInfo = uni.getSystemInfoSync()
-			console.log(sysInfo.windowHeight)
-			this.wh = sysInfo.windowHeight
+			// console.log(sysInfo.windowHeight)
+			this.wh = sysInfo.windowHeight - 50
 			
 			// 调用获取分类列表数据的方法
 			this.getCateList()
@@ -85,6 +89,13 @@
 				gotoGoodsList(item3){
 					uni.navigateTo({
 						url: "/subpkg/goods_list/goods_list?cid=" + item3.catid
+					})
+				},
+				
+				// 跳转至搜索页面
+				gotoSearch(){
+					uni.navigateTo({
+						url: "/subpkg/search/search"
 					})
 				}
 		}

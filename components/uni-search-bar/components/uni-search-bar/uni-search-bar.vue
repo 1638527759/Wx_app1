@@ -114,8 +114,8 @@
 		},
 		data() {
 			return {
-				show: true,
-				showSync: true,
+				show: false,
+				showSync: false,
 				searchVal: ''
 			}
 		},
